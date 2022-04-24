@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <div>
+    <p>{{work.title}}</p>
+    <hr>
+    <p>{{work.artist}}</p>
+    <hr>
+    <p>{{work.year}}</p>
+    <hr>
+    <p>{{work.museum}}</p>
+
+    <p><a href="/works/{{work.id}}/edit">Edit</a></p>
+  </div>
+
+{% endblock %}

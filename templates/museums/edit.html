@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form action="/museums/{{museum.id}}" method="post">
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" value="{{museum.name}}" required>
+  </div>
+
+  <div>
+    <label for="address">Address:</label>
+    <input type="text" id="address" name="address" value="{{museum.address}}" required autofocus>
+  </div>
+
+<!--  
+
+  <div>
+    <label for="author">Author:</label>
+    <select id="author" name="author_id">
+      {% for author in all_authors %}
+        <option value="{{ author.id }}"
+          {% if book.author.id == author.id %} selected="selected"{% endif %}>
+          {{ author.full_name() }}
+        </option>
+      {% endfor %}
+    </select>
+  </div> -->
+
+  <button type="submit">Update museum</button>
+
+</form>
+
+{% endblock %}

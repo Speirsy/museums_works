@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+{% for museum in museums %}
+  <div> 
+    <div> 
+      <a href="/museums/{{museum.id}}">{{museum.name}}</a>
+      <address>
+        {{museum.address}}
+      </address>
+    </div>
+  </div>
+{% endfor %}
+
+{% endblock %}
+
+
+<!-- <div class="buttons">
+
+  <form class="delete-form" action="/books/{{book.id}}/delete" method="POST">
+    <button class="trash-button"><i class="fa fa-trash-o fa-3x" style="color:red" aria-hidden="true"></i></button> -->
